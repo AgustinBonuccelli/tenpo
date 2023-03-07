@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    properties:
+      hibernate:
+        format_sql: 'true'
+    show-sql: 'false'
+    hibernate:
+      ddl-auto: update
+  cache:
+    cache-names: percentages
+    caffeine:
+      spec=maximumSize=500,expireAfterAccess=30m:
+tenpo:
+  url: 'http://localhost:8080'
